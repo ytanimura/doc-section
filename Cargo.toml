@@ -1,0 +1,22 @@
+[package]
+name = "doc-section"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Use sections of a Markdown file as Rust documentation"
+license = "Apache-2.0"
+readme = "README.md"
+include = ["/src/**", "/tests/**", "/README.md", "/LICENSE", "/Cargo.toml", "/Cargo.lock"]
+
+[lib]
+proc-macro = true
+
+[workspace]
+members = ["examples/fruit"]
+resolver = "3"
+
+[dependencies]
+proc-macro2 = "1"
+quote = "1"
+syn = { version = "2", features = ["full", "visit-mut"] }
+pulldown-cmark = { version = "0.13", default-features = false }
