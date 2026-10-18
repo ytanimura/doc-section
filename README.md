@@ -1,12 +1,22 @@
 # doc-section
 
+[![crates.io](https://img.shields.io/crates/v/doc-section)](https://crates.io/crates/doc-section)
+[![docs.rs](https://img.shields.io/docsrs/doc-section)](https://docs.rs/doc-section)
+
 Keep your Rust API documentation in one Markdown file. `doc-section` extracts individual level-two heading sections and turns them into `#[doc = "..."]` attributes, so you can document a module, its types, fields, and methods without creating a separate file for every item.
 
 Targets stable Rust 1.88 or newer.
 
 ## Getting started
 
-For local development, add this crate as a path dependency:
+Add `doc-section` to your `Cargo.toml`:
+
+```toml
+[dependencies]
+doc-section = "0.1"
+```
+
+For local development against a checkout, use a path dependency instead:
 
 ```toml
 [dependencies]
@@ -67,7 +77,7 @@ The attribute on the struct also processes its field attributes. To document onl
 
 The selected h2 heading is omitted, and headings within its body move up two levels. For example, `### Examples` becomes `# Examples`, as expected by rustdoc.
 
-See [examples/fruit](examples/fruit/) for a complete working crate, including the constructor, return type, and executable documentation example.
+See [examples/fruit](https://github.com/ytanimura/doc-section/tree/main/examples/fruit) for a complete working crate, including the constructor, return type, and executable documentation example.
 
 ## Modules, implementations, and traits
 
@@ -130,7 +140,7 @@ For Rust's attribute macro restrictions, see the [Rust Reference](https://doc.ru
 
 ## Development
 
-The workspace contains the procedural macro crate and the [Fruit example crate](examples/fruit/). The example covers crate documentation, structs, fields, methods, and an executable `Examples` section.
+The workspace contains the procedural macro crate and the [Fruit example crate](https://github.com/ytanimura/doc-section/tree/main/examples/fruit). The example covers crate documentation, structs, fields, methods, and an executable `Examples` section.
 
 ```sh
 cargo test --workspace

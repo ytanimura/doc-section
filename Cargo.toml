@@ -6,6 +6,10 @@ rust-version = "1.88"
 description = "Use sections of a Markdown file as Rust documentation"
 license = "Apache-2.0"
 readme = "README.md"
+repository = "https://github.com/ytanimura/doc-section"
+documentation = "https://docs.rs/doc-section"
+keywords = ["documentation", "markdown", "rustdoc", "proc-macro"]
+categories = ["development-tools::procedural-macro-helpers", "text-processing"]
 include = ["/src/**", "/tests/**", "/README.md", "/LICENSE", "/Cargo.toml", "/Cargo.lock"]
 
 [lib]
